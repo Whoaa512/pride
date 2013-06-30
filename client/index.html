@@ -1,34 +1,38 @@
 <head>
-  <title>BitTorrent Code Challenge</title>
+  <title>PRIDE!!</title>
 </head>
 
 <body>
-  {{> inifinity-feeds}}
+  {{> inifinityFeeds}}
 </body>
 
-<template name='inifinity-feeds'>
+<template name='navBar'>
+    <!-- header -->
+      <div class='row'>
+	<header>
+	  <h1>PRIDE!!</h1>
+	  <button class='btn btn-primary text-center'>More Photos!</button>
+	</header>
+      </div>
+    <!-- /header -->
+</template>
+
+<template name='inifinityFeeds'>
   <div class='text-center'>
-    <div id='detailsModal' class='modal hide fade text-center'></div>
     <div class='container'>
       <div class='row'>
-        <!-- header -->
-        <div class='row'>
-          <header>
-            <h1>TED Video Feed</h1>
-          </header>
-        </div>
-        <!-- /header -->
+	{{> navBar }}
+	<!-- main content -->
+	<div class='row' id="photoBoard"></div>
+	<div class='row' id="feed"></div>
+	<!-- /main content -->
 
-        <!-- main content -->
-        <div class='row' id="feed"></div>
-        <!-- /main content -->
-
-        <!-- footer -->
-        <div class='row'>
-          <footer>
-          </footer>
-        </div>
-        <!-- /footer -->
+	<!-- footer -->
+	<div class='row'>
+	  <footer>
+	  </footer>
+	</div>
+	<!-- /footer -->
       </div>
     </div>
   </div>

@@ -7,9 +7,5 @@ autopublish
 insecure
 preserve-inputs
 bootstrap
-twitter
-accounts-base
-accounts-ui
-accounts-twitter
 backbone
 jquery

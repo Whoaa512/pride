@@ -15,8 +15,12 @@ function feedLoaded() {
       result.feed.entries.forEach(function(entry, key, list) {
         feedEntries.add(entry);
       });
-      var app = TEDLiveFeed.app = new App({feedList: feedEntries});
-      TEDLiveFeed.appView = new AppView({model: app});
+      var app = TEDLiveFeed.app = new App({
+        feedList: feedEntries
+      });
+      TEDLiveFeed.appView = new AppView({
+        model: app
+      });
     } else {
       console.log(result.error);
       throw new Error('Feed wasn\'t loaded properly.');

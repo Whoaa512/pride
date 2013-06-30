@@ -1,0 +1,97 @@
+<!doctype html>
+
+<!--[if lt IE 7]>
+  <html class="nojs ms lt_ie7" lang="en">
+<![endif]-->
+
+<!--[if IE 7]>
+  <html class="nojs ms ie7" lang="en">
+<![endif]-->
+
+<!--[if IE 8]>
+  <html class="nojs ms ie8" lang="en">
+<![endif]-->
+
+<!--[if gt IE 8]>
+  <html class="nojs ms" lang="en">
+<![endif]-->
+
+<html lang="en">
+  <head>
+    <title>BitTorrent Code Challenge</title>
+
+    <meta charset="utf-8">
+    <!-- 3rd Party CSS -->
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Mobile Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JS libs that need to be in the head -->
+    <script src="libs/js/modernizr.js"></script>
+    <script src="http://vjs.zencdn.net/4.0/video.js"></script>
+  </head>
+
+  <body class='text-center'>
+    <a href="https://github.com/Whoaa512/ted_live_feed"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6 -->
+    <!--[if lt IE 7]>
+      <p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    <![endif]-->
+
+    <div id='detailsModal' class='modal hide fade text-center'></div>
+    <div class='container'>
+      <div class='row'>
+        <!-- header -->
+        <div class='row'>
+          <header>
+            <h1>TED Video Feed</h1>
+          </header>
+        </div>
+        <!-- /header -->
+
+        <!-- main content -->
+        <div class='row' id="feed"></div>
+        <!-- /main content -->
+
+        <!-- footer -->
+        <div class='row'>
+          <footer>
+          </footer>
+        </div>
+        <!-- /footer -->
+      </div>
+    </div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!--  3rd Party js-->
+    <script src="https://www.google.com/jsapi"></script>
+    <script src='libs/js/jquery-1.10.1-min.js'></script>
+    <script src='libs/bootstrap/js/bootstrap.js'></script>
+    <script src='libs/js/moment-min.js'></script>
+    <script src='libs/js/underscore-min.js'></script>
+    <script src='libs/js/backbone-min.js'></script>
+
+  <!-- My js -->
+    <!-- Model + Collection -->
+    <script src='models/feed.js'></script>
+    <!-- Views -->
+    <script src='views/ItemView.js'></script>
+    <script src='views/ItemDetailView.js'></script>
+    <script src='views/RowView.js'></script>
+    <script src='views/ListView.js'></script>
+    <script src='AppView.js'></script>
+    <!-- App model -->
+    <script src='app.js'></script>
+
+    <!-- Initial app setup -->
+    <script src='setup.js'></script>
+
+  </body>
+</html>

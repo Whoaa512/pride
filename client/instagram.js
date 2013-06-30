@@ -23,11 +23,17 @@ function render(data) {
 }
 
 Template.navBar.events({
-  'click .btn': _.throttle(function(e) {
-      getNewPhotos();
-    }, 500)
+  'click .btn': _.throttle(function() {
+    getNewPhotos();
+  }, 1500)
 });
 
-Meteor.startup(function () {
+Meteor.setInterval(function() {
+  _.throttle(function() {
+    getNewPhotos();
+  }, 1500)
+}, 5000);
+
+Meteor.startup(function() {
   getNewPhotos();
 });

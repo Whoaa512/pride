@@ -2,21 +2,6 @@ var INSTAID = 'c28bc8730c734259aba3fd5c1946f073';
 var markersArray = [];
 var instaArray = [];
 
-if (Meteor.isClient) {
-  Template.hello.greeting = function() {
-    return "Welcome to pride.";
-  };
-
-  Template.hello.events({
-    'click input': function() {
-      // template data, if any, is available in 'this'
-      if (typeof console !== 'undefined')
-	getNewPhotos();
-      console.log("You pressed the button");
-    }
-  });
-}
-
 function getNewPhotos() {
   $.ajax({
     type: "GET",
